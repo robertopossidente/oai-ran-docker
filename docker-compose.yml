@@ -1,0 +1,23 @@
+version: '3'
+
+rru:
+    build: ./rru/
+    image: rru
+    privileged: true
+    network_mode: host
+    stdin_open: true
+    tty: true
+    volumes:
+        - "./config_files/:/config_files"
+        - "/dev/bus/usb:/dev/bus/usb"
+
+rcc:
+    build: ./rcc/
+    image: rcc
+    privileged: true
+    network_mode: host
+    stdin_open: true
+    tty: true
+    volumes:
+        - "./config_files/:/config_files"
+        - "/dev/bus/usb:/dev/bus/usb"
