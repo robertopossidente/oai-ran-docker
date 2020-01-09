@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM base-ran
 MAINTAINER Cleverson Nahum <cleversonahum@gmail.com>
 
 VOLUME ["/dev/bus/usb"]
