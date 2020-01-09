@@ -6,7 +6,7 @@ VOLUME ["/dev/bus/usb"]
 ENV USER=root
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt update && apt-get install linux-image-4.15.0-39-lowlatency linux-headers-4.15.0-39-lowlatency software-properties-common git wget git build-essential sudo psmisc -yq && GIT_SSL_NO_VERIFY=true git clone https://gitlab.eurecom.fr/oai/openairinterface5g.git
+RUN apt-get update && apt update && apt-get install linux-image-4.15.0-39-lowlatency linux-headers-4.15.0-39-lowlatency software-properties-common git wget git build-essential sudo psmisc vim -yq && GIT_SSL_NO_VERIFY=true git clone https://gitlab.eurecom.fr/oai/openairinterface5g.git 
 
 WORKDIR /openairinterface5g/
 
