@@ -2,6 +2,7 @@ FROM base-ran
 MAINTAINER Cleverson Nahum <cleversonahum@gmail.com>
 
 VOLUME ["/dev/bus/usb"]
+VOLUME ["/config_files"]
 
 ENV USER=root
 ENV DEBIAN_FRONTEND=noninteractive
