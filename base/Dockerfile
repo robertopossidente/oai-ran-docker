@@ -10,4 +10,4 @@ RUN apt-get update && apt-get install linux-image-lowlatency linux-headers-lowla
 
 WORKDIR /openairinterface5g/
 
-RUN /bin/bash -c "source oaienv ; ./cmake_targets/build_oai -I  --eNB --install-system-files -w USRP;"
+RUN /bin/bash -c "source oaienv ; ./cmake_targets/build_oai -I  --eNB --install-system-files -w USRP --install-optional-packages -a;"
