@@ -1,5 +1,5 @@
 FROM base-ran
-MAINTAINER Lucas Nóvoa <lucasnmartin300@gmail.com>
+MAINTAINER Cleverson Nahum <cleversonahum@gmail.com>
 
 VOLUME ["/dev/bus/usb"]
 VOLUME ["/config_files"]
