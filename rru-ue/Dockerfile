@@ -9,4 +9,4 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /openairinterface5g/
 
-RUN /bin/bash -c "source oaienv; sudo apt-get install net-tools && apt-get install iputils-ping && apt-get update; ./cmake_targets/build_oai --UE"
+RUN /bin/bash -c "git checkout -f v1.0.0; source oaienv; sudo apt-get install net-tools && apt-get install iputils-ping && apt-get update; ./cmake_targets/build_oai -I --UE -t ETHERNET --musim"
