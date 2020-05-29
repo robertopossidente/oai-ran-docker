@@ -12,6 +12,17 @@ services:
             - "./config_files/:/config_files"
             - "/dev/bus/usb:/dev/bus/usb"
 
+    rru-ue:
+        build: ./rru-ue/
+        image: rru-ue
+        privileged: true
+        network_mode: host
+        stdin_open: true
+        tty: true
+        volumes:
+            - "./config_files/:/config_files"
+            - "/dev/bus/usb:/dev/bus/usb"
+
     rcc:
         build: ./rcc/
         image: rcc
