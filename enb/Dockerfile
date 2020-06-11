@@ -11,4 +11,4 @@ WORKDIR /openairinterface5g/
 
 RUN /bin/bash -c "sed -i '102i\ host=NULL;\' ./openair3/NAS/UE/API/USER/user_api.c "
 
-RUN /bin/bash -c "source oaienv; ./cmake_targets/build_oai -I --eNB -w USRP"
+RUN /bin/bash -c "source oaienv; ./cmake_targets/build_oai --eNB -w USRP"
