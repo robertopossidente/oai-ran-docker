@@ -16,6 +16,6 @@ RUN git submodule init && sed -i 's/https:\/\/gitlab.eurecom.fr\/flexran\/flexra
 
 WORKDIR ./controller
 
-RUN git checkout v2.2 && sudo apt -y install npm nodejs-legacy && sudo npm install apidoc -g && npm install -g npm && npm install -g n && n stable && apidoc -i src/ -o ./docs -f ".*\\.cc$" -f ".*\\.h$" && ./tools/install_dependencies && ./build_flexran_rtc.sh 
+RUN git checkout v2.2 && sudo curl -sL https://deb.nodesource.com/setup_14.x | bash && sudo apt -y install nodejs && sudo npm install -g apidoc && npm install -g npm && npm install -g n && n stable && apidoc -i src/ -o ./docs -f ".*\\.cc$" -f ".*\\.h$" && ./tools/install_dependencies && ./build_flexran_rtc.sh 
 
 
